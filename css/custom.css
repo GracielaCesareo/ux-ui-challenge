@@ -5,6 +5,17 @@
 .fas {
   color: #8d8d8d; }
 
+.cta-btn {
+  background-color: #FFCC00;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem; }
+  .cta-btn:hover {
+    background-color: #f5c400; }
+  .cta-btn .fas {
+    color: #000000; }
+
 header {
   display: -webkit-box;
   display: -moz-box;
@@ -17,11 +28,29 @@ header {
   height: 5rem;
   position: relative;
   top: 0; }
-  header .brand p {
-    font-size: 2rem;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-weight: bold; }
+  header .brand {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    header .brand p {
+      font-size: 2rem;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: bold; }
+    header .brand .brand-ombu {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      color: #FFFFFF; }
+      header .brand .brand-ombu img {
+        width: 130px;
+        margin-left: 0.625rem; }
   header .navigation-container {
     display: -webkit-box;
     display: -moz-box;
@@ -41,6 +70,8 @@ header {
       border-radius: 50%; }
       header .navigation-container .avatar-container p, header .navigation-container .avatar-container .fas {
         color: #FFFFFF; }
+      header .navigation-container .avatar-container .avatar-name {
+        padding: 0 0.625rem; }
     header .navigation-container .notifications-container {
       display: -webkit-box;
       display: -moz-box;
@@ -53,88 +84,116 @@ header {
       height: 40px;
       width: 40px;
       border-radius: 50%;
-      background-color: #D9F1F1; }
+      background-color: #D9F1F1;
+      margin: 0 1.25rem; }
   header .search-input-container form {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex; }
+    display: flex;
+    position: relative; }
+    header .search-input-container form .fas {
+      position: absolute;
+      font-size: 1.5rem;
+      top: 8px;
+      left: 9px; }
+    header .search-input-container form input {
+      width: 40px;
+      border-radius: 50px;
+      text-indent: 25px;
+      background-color: #D9F1F1;
+      border: none;
+      transition: all 1s ease-in; }
+      header .search-input-container form input.active {
+        width: 350px;
+        background-color: #FFFFFF; }
+        header .search-input-container form input.active + .button-container {
+          display: block; }
+    header .search-input-container form .button-container {
+      display: none; }
+      header .search-input-container form .button-container button {
+        position: absolute;
+        top: 1px;
+        right: 1px; }
+    header .search-input-container form .fa-times {
+      display: none; }
 
-main {
-  margin-top: 5rem; }
-  main .content {
-    max-width: 1024px;
-    margin: 0 auto; }
-    main .content .top-section {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1.5rem; }
-      main .content .top-section .title {
-        font-size: 2rem;
-        font-weight: 400; }
-      main .content .top-section .cta-btn {
-        background-color: #FFCC00;
-        padding: 10px 20px;
-        border-radius: 30px;
-        border: none;
-        font-size: 1rem; }
-        main .content .top-section .cta-btn:hover {
-          background-color: #f5c400; }
-        main .content .top-section .cta-btn .fas {
-          color: #000000; }
-    main .content .projects-container {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-      main .content .projects-container .card-project {
-        width: 32%;
-        min-height: 250px;
-        max-height: 300px;
-        margin-bottom: 1.5rem;
-        padding: 20px;
-        border-radius: 20px;
-        border: solid 1px #57CE81;
-        position: relative; }
-        main .content .projects-container .card-project .mark-project {
-          position: absolute;
-          right: 20px; }
-        main .content .projects-container .card-project .name-project {
-          font-size: 18px;
-          font-weight: bold;
-          height: 55px;
-          width: 90%;
-          margin-bottom: 1rem;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical; }
-        main .content .projects-container .card-project .date-project {
-          font-size: 0.875rem;
-          font-weight: 400;
-          margin-bottom: 1rem; }
-        main .content .projects-container .card-project .description-project {
-          font-size: 0.875rem;
-          max-height: 115px;
-          margin-bottom: 1rem;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          color: #8d8d8d; }
-        main .content .projects-container .card-project .estimation-project {
-          font-size: 0.875rem;
-          position: absolute;
-          bottom: 20px; }
-          main .content .projects-container .card-project .estimation-project span {
-            font-weight: bold; }
+main .content {
+  max-width: 1024px;
+  margin: 0 auto; }
+  main .content .top-section {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+    main .content .top-section .title {
+      font-size: 2rem;
+      font-weight: 400; }
+  main .content .projects-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap; }
+    main .content .projects-container .card-project {
+      width: 32%;
+      min-height: 250px;
+      max-height: 300px;
+      margin-bottom: 1.5rem;
+      padding: 20px;
+      border-radius: 20px;
+      border: solid 1px #57CE81;
+      position: relative;
+      background-color: #FFFFFF; }
+      main .content .projects-container .card-project:nth-child(3n+2) {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem; }
+      main .content .projects-container .card-project .mark-project {
+        position: absolute;
+        right: 20px; }
+      main .content .projects-container .card-project .name-project {
+        font-size: 18px;
+        font-weight: bold;
+        height: 55px;
+        width: 90%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; }
+      main .content .projects-container .card-project .date-project {
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-bottom: 1rem; }
+      main .content .projects-container .card-project .description-project {
+        font-size: 0.875rem;
+        max-height: 115px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: #8d8d8d; }
+      main .content .projects-container .card-project .estimation-project {
+        font-size: 0.875rem;
+        position: absolute;
+        bottom: 20px; }
+        main .content .projects-container .card-project .estimation-project span {
+          font-weight: bold; }
+
+main .cta-reports {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0; }

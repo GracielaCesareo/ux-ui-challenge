@@ -7,6 +7,12 @@
 .fas{
     color: lighten($dark-gray, 40%)
 }
+.cta-btn{
+    @include cta;
+    .fas{
+        color: $black;
+    }
+}
 
 header{
     @include flex;
@@ -17,12 +23,22 @@ header{
     position: relative;
     top: 0;
     .brand{
-
+        @include flex;
         p{
             font-size: 2rem;
             color: $white;
             text-transform: uppercase;
             font-weight: bold;
+        }
+        .brand-ombu{
+            @include flex;
+            align-items: center;
+            padding:  0 1.25rem;
+            color: $white;
+            img{
+                width: 130px;
+                margin-left: 0.625rem;
+            }
         }
     }
 
@@ -38,6 +54,9 @@ header{
             p, .fas{
                 color: $white;
             }
+            .avatar-name{
+                padding: 0 0.625rem;
+            }
         }
         .notifications-container{
             @include flex;
@@ -48,19 +67,53 @@ header{
             width: 40px;
             border-radius: 50%;
             background-color: $light-green;
+            margin: 0 1.25rem;
         }
     }
     .search-input-container{
+
         form{
             @include flex;
-
+            position: relative;
+            .fas{
+                position: absolute;
+                font-size: 1.5rem;
+                top: 8px;
+                left: 9px;
+            }
+            input{
+                width: 40px;
+                border-radius: 50px;
+                text-indent: 25px;
+                background-color: $light-green;
+                border: none;
+                transition: all 1s ease-in;
+                &.active{
+                    width: 350px;
+                    background-color: $white;
+                    + .button-container{
+                        display: block;
+                    }
+                }
+                
+            }
+            .button-container{
+                display: none;
+                button{
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                }
+            }
+            .fa-times{
+                display: none;
+            }
         }
     }
 
 }
 
 main{
-    margin-top: 5rem;
     .content{
         max-width: 1024px;
         margin: 0 auto;
@@ -68,22 +121,16 @@ main{
             @include flex;
             justify-content: space-between;
             margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
             .title{
                 font-size: 2rem;
                 font-weight: 400;
-            }
-            .cta-btn{
-                @include cta;
-                .fas{
-                    color: $black;
-                }
             }
         }
 
         .projects-container{
             @include flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             .card-project{
                 width: 32%;
                 min-height: 250px;
@@ -93,6 +140,11 @@ main{
                 border-radius: 20px;
                 border: solid 1px #57CE81;
                 position: relative;
+                background-color: $white;
+                &:nth-child(3n+2){
+                    margin-left: 1.25rem;
+                    margin-right: 1.25rem;
+                }
                 .mark-project{
                     position: absolute;
                     right: 20px;
@@ -135,9 +187,19 @@ main{
                 }
             }
         }
-        
+    }
+    .cta-reports{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1.25rem;
+        background-color: $white;
+        position: fixed;
+        bottom: 0;
     }
 }
+
+
 
 
 

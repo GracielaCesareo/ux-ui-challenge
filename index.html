@@ -15,7 +15,10 @@
   <header>
     <span class="brand">
       <p>Points App</p>
-      <span></span>
+      <span class="brand-ombu">
+        Powered By
+        <img src="./images/logo-3.png" alt="">
+      </span>
     </span>
 
     <!-- Navigation start -->
@@ -32,9 +35,13 @@
       </div>
       <div class="search-input-container">
         <form action="">
-          <input type="text" placeholder="Search">
-          <span>
-            <button type="submit">Go</button>
+          <div class="search-icon" id="searchButton">
+            <i class="fas fa-search" ></i>
+            <i class="fas fa-times"></i>
+          </div>
+          <input type="text" placeholder="Search" id="inputSearch">
+          <span class="button-container">
+            <button type="submit" class="cta-btn">Go</button>
           </span>
         </form>
       </div>
@@ -117,6 +124,13 @@
       </section>
       
     </section>
+
+    <section class="cta-reports">
+      <button type="button" class="cta-btn">
+        <i class="fas fa-clipboard-list"></i>
+        View Reports
+      </button>
+    </section>
   </main>
   <!-- Content end -->
 
@@ -140,5 +154,6 @@
       <a href="#" class="button">View Reports</a>
     </div>
   </div> -->
+  <script src="js/app.js"></script>
 </body>
 </html>
