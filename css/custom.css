@@ -60,3 +60,81 @@ header {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
+
+main {
+  margin-top: 5rem; }
+  main .content {
+    max-width: 1024px;
+    margin: 0 auto; }
+    main .content .top-section {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem; }
+      main .content .top-section .title {
+        font-size: 2rem;
+        font-weight: 400; }
+      main .content .top-section .cta-btn {
+        background-color: #FFCC00;
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: none;
+        font-size: 1rem; }
+        main .content .top-section .cta-btn:hover {
+          background-color: #f5c400; }
+        main .content .top-section .cta-btn .fas {
+          color: #000000; }
+    main .content .projects-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      main .content .projects-container .card-project {
+        width: 32%;
+        min-height: 250px;
+        max-height: 300px;
+        margin-bottom: 1.5rem;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 1px #57CE81;
+        position: relative; }
+        main .content .projects-container .card-project .mark-project {
+          position: absolute;
+          right: 20px; }
+        main .content .projects-container .card-project .name-project {
+          font-size: 18px;
+          font-weight: bold;
+          height: 55px;
+          width: 90%;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        main .content .projects-container .card-project .date-project {
+          font-size: 0.875rem;
+          font-weight: 400;
+          margin-bottom: 1rem; }
+        main .content .projects-container .card-project .description-project {
+          font-size: 0.875rem;
+          max-height: 115px;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          color: #8d8d8d; }
+        main .content .projects-container .card-project .estimation-project {
+          font-size: 0.875rem;
+          position: absolute;
+          bottom: 20px; }
+          main .content .projects-container .card-project .estimation-project span {
+            font-weight: bold; }

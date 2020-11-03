@@ -59,7 +59,85 @@ header{
 
 }
 
+main{
+    margin-top: 5rem;
+    .content{
+        max-width: 1024px;
+        margin: 0 auto;
+        .top-section{
+            @include flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            .title{
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            .cta-btn{
+                @include cta;
+                .fas{
+                    color: $black;
+                }
+            }
+        }
 
+        .projects-container{
+            @include flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .card-project{
+                width: 32%;
+                min-height: 250px;
+                max-height: 300px;
+                margin-bottom: 1.5rem;
+                padding: 20px;
+                border-radius: 20px;
+                border: solid 1px #57CE81;
+                position: relative;
+                .mark-project{
+                    position: absolute;
+                    right: 20px;
+                }
+                .name-project{
+                    font-size: 18px;
+                    font-weight: bold;
+                    height: 55px;
+                    width: 90%;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+                .date-project{
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    margin-bottom: 1rem;
+                }
+                .description-project{
+                    font-size: 0.875rem;
+                    max-height: 115px;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    color: lighten($dark-gray, 40%)
+                }
+                .estimation-project{
+                    font-size: 0.875rem;
+                    position: absolute;
+                    bottom: 20px;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        
+    }
+}
 
 
 
