@@ -13,6 +13,10 @@
 <body> 
 
   <header>
+    <button type="button" class="mobile-menu" id="mobileMenu">
+      <i class="fas fa-bars menu"></i>
+      <i class="fas fa-times close"></i>
+    </button>
     <span class="brand">
       <p>Points App</p>
       <span class="brand-ombu">
@@ -28,15 +32,19 @@
           <img src="./images/avatar.png" alt="Avatar">
         </div>
         <p class="avatar-name">John Doe</p>
-        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down" id="downArrow"></i>
+        <div class="cta-sing-out">
+          <button type="button" class="cta-btn magenta">Sing Out</button>
+        </div>
       </div>
       <div class="notifications-container">
+        <span class="notification-alert"></span>
         <i class="fas fa-bell"></i>
       </div>
       <div class="search-input-container">
         <form action="">
           <div class="search-icon" id="searchButton">
-            <i class="fas fa-search" ></i>
+            <i class="fas fa-search"></i>
             <i class="fas fa-times"></i>
           </div>
           <input type="text" placeholder="Search" id="inputSearch">
@@ -57,71 +65,13 @@
         <h1 class="title">Projects</h1>
         <button type="button" class="cta-btn">
           <i class="fas fa-plus-circle"></i>
-          Add New Project
+          Add  <span>New Project</span>
         </button>
       </div>
-      <section class="projects-container">
-        <div class="card-project">
-          <span class="mark-project"><i class="fas fa-star"></i></span>
-          <p class="name-project">Name Project</p>
-          <p class="date-project">Nov 03 2020</p>
-          <p class="description-project">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat Velit officia consequat Velit officia consequat 
-          </p>
-          <p class="estimation-project">
-            Total Estimates: <span>8</span>  
-          </p>
-        </div>
-
-        <div class="card-project">
-          <span class="mark-project"><i class="fas fa-star"></i></span>
-          <p class="name-project">Name Project</p>
-          <p class="date-project">Nov 03 2020</p>
-          <p class="description-project">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat Velit officia consequat Velit officia consequat 
-          </p>
-          <p class="estimation-project">
-            Total Estimates: <span>8</span>  
-          </p>
-        </div>
-
-        <div class="card-project">
-          <span class="mark-project"><i class="fas fa-star"></i></span>
-          <p class="name-project">Name Project</p>
-          <p class="date-project">Nov 03 2020</p>
-          <p class="description-project">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat Velit officia consequat Velit officia consequat 
-          </p>
-          <p class="estimation-project">
-            Total Estimates: <span>8</span>  
-          </p>
-        </div>
-
-        <div class="card-project">
-          <span class="mark-project"><i class="fas fa-star"></i></span>
-          <p class="name-project">Name Project</p>
-          <p class="date-project">Nov 03 2020</p>
-          <p class="description-project">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat Velit officia consequat Velit officia consequat 
-          </p>
-          <p class="estimation-project">
-            Total Estimates: <span>8</span>  
-          </p>
-        </div>
-
-        <div class="card-project">
-          <span class="mark-project"><i class="fas fa-star"></i></span>
-          <p class="name-project">Name Project</p>
-          <p class="date-project">Nov 03 2020</p>
-          <p class="description-project">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat Velit officia consequat Velit officia consequat 
-          </p>
-          <p class="estimation-project">
-            Total Estimates: <span>8</span>  
-          </p>
-        </div>
-
-      </section>
+      
+      <!-- Projects Container start -->
+      <section class="projects-container" id="contentProjects"></section>
+      <!-- Projects Container end -->
       
     </section>
 
@@ -135,25 +85,6 @@
   <!-- Content end -->
 
 
-  <!-- <nav>
-    <span class="brand">Points App</span>
-    <a href="#">Sign Out</a>
-  </nav> -->
-  <!-- <div class="content">
-    <h2>My Projects</h2>
-    <ul>
-      <li>Test Project</li>
-      <li>Client Project with Stories</li>
-      <li>Test Project with Estimates</li>
-      <li>E-commerce Project</li>
-      <li>Another Client's Project</li>
-    </ul>
-  
-    <div class="actions">
-      <a href="#" class="button">Add a Project</a>
-      <a href="#" class="button">View Reports</a>
-    </div>
-  </div> -->
-  <script src="js/app.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>
