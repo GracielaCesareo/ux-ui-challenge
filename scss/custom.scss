@@ -1,50 +1,117 @@
- nav {
-  background: black;
-  color: white;
-  padding: 15px;
+@import "./variables";
+@import "./mixins";
+
+.img-container{
+    max-width: 100%;
+}
+.fas{
+    color: lighten($dark-gray, 40%)
 }
 
-nav .brand {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.2em;
+header{
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black;
+    height: 5rem;
+    position: relative;
+    top: 0;
+    .brand{
+
+        p{
+            font-size: 2rem;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .navigation-container{
+        @include flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        .avatar-container{
+            @include flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            p, .fas{
+                color: $white;
+            }
+        }
+        .notifications-container{
+            @include flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: $light-green;
+        }
+    }
+    .search-input-container{
+        form{
+            @include flex;
+
+        }
+    }
+
 }
 
-nav a {
-  background: #F70A7C;
-  color: white;
-  float: right;
-  border-radius: 10px;
-  padding: 3px 17px;
-}
 
-h2 {
-  text-align: left;
-}
 
-.content {
-  max-width: 1024px;
-  margin: 0 auto;
-}
 
-li {
-  display: inline-block;
-  width: 27%;
-  border: 1px solid #FFCC00;
-  padding: 20px;
-  font-size: 2rem;
-  vertical-align: top;
-  margin: 10px 1%;
-}
 
-ul {
-  margin: 20px 0;
-}
 
-ul:after {
-  clear: both;
-}
 
-.actions {
-  text-align: center;
-}
+//  nav {
+//   background: black;
+//   color: white;
+//   padding: 15px;
+// }
+
+// nav .brand {
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-size: 1.2em;
+// }
+
+// nav a {
+//   background: #F70A7C;
+//   color: white;
+//   float: right;
+//   border-radius: 10px;
+//   padding: 3px 17px;
+// }
+
+// h2 {
+//   text-align: left;
+// }
+
+// .content {
+//   max-width: 1024px;
+//   margin: 0 auto;
+// }
+
+// li {
+//   display: inline-block;
+//   width: 27%;
+//   border: 1px solid #FFCC00;
+//   padding: 20px;
+//   font-size: 2rem;
+//   vertical-align: top;
+//   margin: 10px 1%;
+// }
+
+// ul {
+//   margin: 20px 0;
+// }
+
+// ul:after {
+//   clear: both;
+// }
+
+// .actions {
+//   text-align: center;
+// }

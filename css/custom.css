@@ -1,41 +1,62 @@
-nav {
-  background: black;
-  color: white;
-  padding: 15px; }
+/*** COLORS ***/
+.img-container {
+  max-width: 100%; }
 
-nav .brand {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.2em; }
+.fas {
+  color: #8d8d8d; }
 
-nav a {
-  background: #F70A7C;
-  color: white;
-  float: right;
-  border-radius: 10px;
-  padding: 3px 17px; }
-
-h2 {
-  text-align: left; }
-
-.content {
-  max-width: 1024px;
-  margin: 0 auto; }
-
-li {
-  display: inline-block;
-  width: 27%;
-  border: 1px solid #FFCC00;
-  padding: 20px;
-  font-size: 2rem;
-  vertical-align: top;
-  margin: 10px 1%; }
-
-ul {
-  margin: 20px 0; }
-
-ul:after {
-  clear: both; }
-
-.actions {
-  text-align: center; }
+header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  height: 5rem;
+  position: relative;
+  top: 0; }
+  header .brand p {
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold; }
+  header .navigation-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; }
+    header .navigation-container .avatar-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%; }
+      header .navigation-container .avatar-container p, header .navigation-container .avatar-container .fas {
+        color: #FFFFFF; }
+    header .navigation-container .notifications-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: #D9F1F1; }
+  header .search-input-container form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }

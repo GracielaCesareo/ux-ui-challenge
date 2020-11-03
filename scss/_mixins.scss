@@ -1,0 +1,18 @@
+@mixin flex {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+}
+
+@mixin cta {
+    background-color: $orange;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    &:hover{
+        background-color: darken($orange, 2%);
+    }
+}

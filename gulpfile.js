@@ -9,7 +9,6 @@ function style() {
     return gulp.src('./scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('./css/'))
-        .pipe(prefixer('last 2 versions'))
         .pipe(browserSync.stream());
 
 }
@@ -24,6 +23,7 @@ function watch() {
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch('./js/**/*.js').on('change', browserSync.reload);
 }
+
 
 exports.style = style;
 exports.watch = watch;
