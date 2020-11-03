@@ -1,0 +1,374 @@
+@import "./variables";
+@import "./mixins";
+
+.img-container{
+    max-width: 100%;
+}
+.fas{
+    color: lighten($dark-gray, 40%)
+}
+.cta-btn{
+    @include cta;
+    .fas{
+        color: $black;
+    }
+}
+
+header{
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black;
+    height: 5rem;
+    position: relative;
+    top: 0;
+    @media screen and (max-width: 768px){
+        justify-content: center;
+    }
+    .mobile-menu{
+        display: none;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        left: 20px;
+        outline: 0;
+        .close{
+            display: none;
+        }
+        .fas{
+            font-size: 24px;
+            color: $white;
+            @media screen and (max-width: 600px){
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width: 768px){
+            display: block
+        }
+    }
+    .brand{
+        @include flex;
+        @media screen and (max-width: 768px){
+            justify-content: center;
+            flex-direction: column;
+        }
+        p{
+            font-size: 2rem;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: bold;
+            @media screen and (max-width: 768px){
+                font-size: 1.5rem;
+            }
+        }
+        .brand-ombu{
+            @include flex;
+            align-items: center;
+            padding:  0 1.25rem;
+            color: $white;
+            img{
+                width: 130px;
+                margin-left: 0.625rem;
+            }
+        }
+    }
+
+    .navigation-container{
+        @include flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        @media screen and (max-width: 768px){
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: $dark-gray;
+            padding: 1.25rem;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
+            height: 50vh;
+            opacity: 0;
+        }
+        .avatar-container{
+            @include flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            @media screen and (max-width: 768px){
+                margin-bottom: 20px;
+            }
+            p, .fas{
+                color: $white;
+            }
+            .avatar-name{
+                padding: 0 0.625rem;
+            }
+            .fa-chevron-down{
+                @media screen and (max-width: 768px){
+                    display: none;
+                }
+                &.open{
+                    + .cta-sing-out{
+                        opacity: 1;
+                    }
+                }
+            }
+            .cta-sing-out{
+                opacity: 0;
+                position: absolute;
+                top: 80px;
+                right: 20px;
+                width: 150px;
+                padding: 20px;
+                background-color: $black;
+                @media screen and (max-width: 768px){
+                    opacity: 1;
+                    left: 0px;
+                    top: 37vh;
+                    background-color: $dark-gray;
+                }
+            }
+        }
+        .notifications-container{
+            @include flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 1.5rem;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: $light-green;
+            margin: 0 1.25rem;
+            @media screen and (max-width: 768px){
+                margin: 20px 0;
+            }
+            .notification-alert{
+                width: 15px;
+                height: 15px;
+                background-color: $magenta;
+                border-radius: 50%;
+                position: absolute;
+                top: 0px;
+                right: -5px;
+            }
+        }
+    }
+    .search-input-container{
+        @media screen and (max-width: 768px){
+            margin: 20px 0;
+        }
+
+        form{
+            @include flex;
+            position: relative;
+            .fas{
+                position: absolute;
+                font-size: 1.5rem;
+                top: 8px;
+                left: 9px;
+            }
+            input{
+                width: 40px;
+                border-radius: 50px;
+                text-indent: 30px;
+                background-color: $light-green;
+                border: none;
+                transition: all 1s ease;
+                &.active{
+                    width: 350px;
+                    background-color: $white;
+                    + .button-container{
+                        display: block;
+                    }
+                }
+                
+            }
+            .button-container{
+                display: none;
+                button{
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                }
+            }
+            .fa-times{
+                display: none;
+            }
+        }
+    }
+
+}
+
+main{
+    .content{
+        max-width: 1024px;
+        margin: 0 auto;
+        .top-section{
+            @include flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            @media screen and (max-width: 999px){
+                padding: 0 20px;
+            }
+            .title{
+                font-size: 2rem;
+                font-weight: 400;
+            }
+            button{
+                span{
+                    @media screen and (max-width: 769px){
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .projects-container{
+            @include flex;
+            flex-wrap: wrap;
+            @media screen and (max-width: 999px){
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+            .card-project{
+                width: 32%;
+                min-height: 250px;
+                max-height: 300px;
+                margin-bottom: 1.5rem;
+                padding: 20px;
+                border-radius: 20px;
+                border: solid 1px #57CE81;
+                position: relative;
+                background-color: $white;
+                transition: 1 all;
+                @media screen and (min-width: 1000px){
+                    &:nth-child(3n+2){
+                        margin-left: 1.25rem;
+                        margin-right: 1.25rem;
+                    }
+                }
+                @media screen and (max-width: 999px){
+                    width: 49%;
+                }
+
+                @media screen and (max-width: 769px){
+                    width: 100%;
+                }
+                
+                &:hover{
+                    @include shadow;
+                    transform: translate(0, -5%);
+                }
+                .mark-project{
+                    position: absolute;
+                    right: 20px;
+                }
+                .name-project{
+                    font-size: 18px;
+                    font-weight: bold;
+                    height: 55px;
+                    width: 90%;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+                .date-project{
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    margin-bottom: 1rem;
+                }
+                .description-project{
+                    font-size: 0.875rem;
+                    max-height: 115px;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    color: lighten($dark-gray, 40%)
+                }
+                .estimation-project{
+                    font-size: 0.875rem;
+                    position: absolute;
+                    bottom: 20px;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .cta-reports{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1.25rem;
+        background-color: $white;
+        position: fixed;
+        bottom: 0;
+        @include shadowtop;
+    }
+}
+
+
+
+
+
+
+
+//  nav {
+//   background: black;
+//   color: white;
+//   padding: 15px;
+// }
+
+// nav .brand {
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-size: 1.2em;
+// }
+
+// nav a {
+//   background: #F70A7C;
+//   color: white;
+//   float: right;
+//   border-radius: 10px;
+//   padding: 3px 17px;
+// }
+
+// h2 {
+//   text-align: left;
+// }
+
+// .content {
+//   max-width: 1024px;
+//   margin: 0 auto;
+// }
+
+// li {
+//   display: inline-block;
+//   width: 27%;
+//   border: 1px solid #FFCC00;
+//   padding: 20px;
+//   font-size: 2rem;
+//   vertical-align: top;
+//   margin: 10px 1%;
+// }
+
+// ul {
+//   margin: 20px 0;
+// }
+
+// ul:after {
+//   clear: both;
+// }
+
+// .actions {
+//   text-align: center;
+// }

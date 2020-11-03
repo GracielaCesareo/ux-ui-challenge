@@ -1,0 +1,36 @@
+@mixin flex {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+}
+
+@mixin cta {
+    background-color: $orange;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    &:hover{
+        background-color: darken($orange, 2%);
+    }
+    &.magenta{
+        background-color: $magenta;
+        &:hover{
+            background-color: darken($magenta, 2%);
+        }
+    }
+}
+
+@mixin shadow {
+    webkit-box-shadow: 10px 10px 30px -10px rgba(39,39,39,0.45);
+    -moz-box-shadow: 10px 10px 30px -10px rgba(39,39,39,0.45);
+    box-shadow: 10px 10px 30px -10px rgba(39,39,39,0.45);
+}
+
+@mixin shadowtop{
+    -webkit-box-shadow: 0px -10px 20px -15px rgba(39,39,39,0.45);
+    -moz-box-shadow: 0px -10px 20px -15px rgba(39,39,39,0.45);
+    box-shadow: 0px -10px 20px -15px rgba(39,39,39,0.45);
+}
